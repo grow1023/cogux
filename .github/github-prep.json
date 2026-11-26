@@ -117,7 +117,7 @@
       "verify_cogux.sh exit 0 on the installed copy"
     ],
     "unverified": [
-      "Install by git clone from the remote: git clone https://github.com/grow1023/cogux \"$HOME/.claude/skills/cogux\"",
+      "reproducibility.install",
       "Whether the own-words summaries count as derivative works of Laws of UX (CC BY-NC-ND 4.0)",
       "No reference file was read in full"
     ],

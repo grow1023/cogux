@@ -3,7 +3,7 @@
   "repoType": "prototype",
   "mode": "update",
   "baselineCommit": "e43ef8ef2d110c2ca64fbb105019d46728e39775",
-  "reviewedHead": "7acbfa4b7a993e626eef0b7e414def07930c1e00",
+  "reviewedHead": "711bdd05ad928c4c3ede393afedc765462af7529",
   "references": [
     {
       "repo": "heydamir/unslop",
@@ -58,6 +58,21 @@
   "diffReview": {
     "since": "e43ef8ef2d110c2ca64fbb105019d46728e39775",
     "files": [
+      ".github/CODEOWNERS",
+      ".github/FUNDING.yml",
+      ".github/ISSUE_TEMPLATE/bug_report.yml",
+      ".github/ISSUE_TEMPLATE/config.yml",
+      ".github/ISSUE_TEMPLATE/feature_request.yml",
+      ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/SECURITY.md",
+      ".github/SUPPORT.md",
+      ".github/dependabot.yml",
+      ".github/github-harness.json",
+      ".github/workflows/codeql.yml",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CITATION.cff",
+      "Makefile",
       "README.ja.md",
       "README.ko.md",
       "README.md",
@@ -80,6 +95,10 @@
       "assets/ko/hero.png",
       "assets/ko/og.png",
       "assets/og.png",
+      "assets/prompts/arch.txt",
+      "assets/prompts/gallery.txt",
+      "assets/prompts/hero.txt",
+      "assets/prompts/og.txt",
       "assets/showcase.html",
       "assets/zh/architecture.png",
       "assets/zh/gallery-1.png",
@@ -98,11 +117,9 @@
       "verify_cogux.sh exit 0 on the installed copy"
     ],
     "unverified": [
-      "Install by git clone from the remote",
+      "Install by git clone from the remote: git clone https://github.com/grow1023/cogux \"$HOME/.claude/skills/cogux\"",
       "Whether the own-words summaries count as derivative works of Laws of UX (CC BY-NC-ND 4.0)",
-      "No reference file was read in full",
-      "git clone https://github.com/grow1023/cogux \"$HOME/.claude/skills/cogux\"",
-      "git clone install: git clone https://github.com/grow1023/cogux \"$HOME/.claude/skills/cogux\""
+      "No reference file was read in full"
     ],
     "blocked": []
   }

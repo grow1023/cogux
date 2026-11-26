@@ -11,7 +11,7 @@
 - 비공개로 보고: GitHub Security Advisories(Repository → Security → Report a vulnerability) 사용
 - 또는 메인테이너에게 직접 연락
 
-48시간 내 접수 확인, 영향도 분류 후 수정 일정을 공유합니다. 책임 있는 공개(responsible disclosure)에 감사드립니다.
+책임 있는 공개(responsible disclosure)에 감사드립니다.
 
 ## Scope
 

@@ -2,7 +2,7 @@
 
 도움이 필요하면:
 
-1. **문서 먼저** — [README](../README.md) 의 Quick Start 와 FAQ 를 확인하세요.
+1. **문서 먼저** — [README](../README.ko.md) 의 "빠른 시작"과 "한계와 개인정보"를 확인하세요. 영어는 [README](../README.md) 의 "Quick start"와 "Limits and privacy"입니다.
 2. **이슈 검색** — 같은 질문이 이미 있는지 [Issues](../../issues) 를 검색하세요.
 3. **새 질문** — 없으면 `question` 라벨로 새 이슈를 여세요.
 4. **버그/기능** — [버그 리포트](../../issues/new?template=bug_report.yml) 또는 [기능 요청](../../issues/new?template=feature_request.yml) 템플릿을 사용하세요.

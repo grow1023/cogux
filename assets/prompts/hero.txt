@@ -1,7 +1,7 @@
 # /gi prompt — kind=hero — project=cogux
 # 7-axis (photo-prompts-master) enforced. 종횡비 명시 필수. 본 파일을 /gi 에 전달.
 
-SUBJECT: hero banner for a software project named 'cogux': cogux — a project.
+SUBJECT: hero banner for a software project named 'cogux': Claude Code skill: reads a project, picks fitting cognitive-psychology principles, edits real UI code and records why in COGUX.md
 CAMERA/LENS: editorial wide composition, 35mm equivalent, balanced depth
 LIGHT: soft directional key light, gentle rim, professional studio neutrality
 FILM/COLOR: modern flat-tech palette, restrained accent color, high legibility

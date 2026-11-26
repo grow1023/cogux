@@ -6,7 +6,7 @@
 
 ![cogux: 説明用の図であり、実際のアプリ画面ではありません](assets/ja/hero.png)
 
-not specified · MIT
+0.1.0 · MIT
 
 ## 使う理由
 
@@ -14,7 +14,7 @@ not specified · MIT
 | --- | --- |
 | 合う原則だけを選ぶ | 利用者、タスク、画面、制約を先に読みます。そのうえで原則を選び、除外した原則も理由とともに必ず書きます。全プロジェクトに同じ組み合わせを使うことは失敗と定めています。 |
 | 実際のUIコードを修正する | 設計判断ごとに、原則、画面、変更内容、そして数・大きさ・有無のように観察できる確認を一つ書きます。その判断をプロジェクトのコードに実装し、COGUX.mdに記録します。 |
-| 読んだ範囲を明記した原則47件 | 各原則ファイルに、定義、出典リンク、適用する場面、適用しない場面、観察による確認、実際に読んだ範囲があります。定義は出典から写さず、自分の言葉で書いています。 |
+| 判断ごとに確認して記録する | 設計判断ごとに観察できる確認が一つ付きます。ブラウザ経路があれば描画した画面で実行し、合格を推測で書かず、結果と未確認項目をCOGUX.mdに残します。 |
 
 ## クイックスタート
 
@@ -51,11 +51,15 @@ bash "$HOME/.claude/skills/cogux/gates/verify_cogux.sh" "$HOME/.claude/skills/co
 
 fixtures/には、初めて使う決済フローと集中学習アプリがあります。それぞれ修正前の画面、修正後の画面、COGUX.mdがあり、選ばれた原則は2つで異なります。
 
+### 読んだ範囲を明記した原則47件
+
+各原則ファイルに、定義、出典リンク、適用する場面、適用しない場面、観察による確認、実際に読んだ範囲があります。定義は出典から写さず、自分の言葉で書いています。
+
 ![合う原則だけを選ぶ: 説明用の図であり、実際のアプリ画面ではありません](assets/ja/gallery-1.png)
 
 ![実際のUIコードを修正する: 説明用の図であり、実際のアプリ画面ではありません](assets/ja/gallery-2.png)
 
-![読んだ範囲を明記した原則47件: 説明用の図であり、実際のアプリ画面ではありません](assets/ja/gallery-3.png)
+![判断ごとに確認して記録する: 説明用の図であり、実際のアプリ画面ではありません](assets/ja/gallery-3.png)
 
 ## 制約とプライバシー
 
@@ -86,7 +90,7 @@ fixtures/には、初めて使う決済フローと集中学習アプリがあ�
 - `skill-decide`: `SKILL.md`, L57–L69 (コード確認済み)
 - `skill-verify`: `SKILL.md`, L71–L87 (コード確認済み)
 - `library`: `references/INDEX.md`, L1–L22 (コード確認済み)
-- `readme-source`: `README.md`, L10–L16 (文書に記載)
+- `rights-and-scope`: `references/INDEX.md`, L5–L21 (文書に記載)
 - `gate`: `gates/verify_cogux.sh`, L1–L34 (実行確認済み)
 - `fixture-a`: `fixtures/checkout-first-time/COGUX.md`, L1–L77 (コード確認済み)
 - `fixture-b`: `fixtures/study-adhd/COGUX.md`, L1–L77 (コード確認済み)
@@ -94,14 +98,15 @@ fixtures/には、初めて使う決済フローと集中学習アプリがあ�
 
 - `selects` → `skill-read`, `skill-select`
 - `implements` → `skill-decide`
-- `library` → `library`
+- `records` → `skill-verify`
 - `read` → `skill-read`, `skill-select`
 - `decide` → `skill-decide`
 - `verify` → `skill-verify`
 - `examples` → `fixture-a`, `fixture-b`
+- `library` → `library`
 - `local-rules` → `skill-boundary`, `skill-decide`
-- `reading-scope` → `readme-source`, `library`
-- `third-party` → `readme-source`, `license`
+- `reading-scope` → `rights-and-scope`, `library`
+- `third-party` → `rights-and-scope`, `license`
 - `gate-run` → `gate`
 - `clone` → `gate`
 - `quickstart` → `gate`, `skill-verify`

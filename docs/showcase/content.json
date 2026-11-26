@@ -14,7 +14,7 @@
   ],
   "project": {
     "name": "cogux",
-    "version": "not specified",
+    "version": "0.1.0",
     "license": "MIT",
     "summary": {
       "en": "A Claude Code skill that reads a project first, picks only the cognitive-psychology principles that fit it, records why, edits real UI code, and writes COGUX.md.",
@@ -88,11 +88,11 @@
       "status": "code-verified"
     },
     {
-      "id": "readme-source",
-      "path": "README.md",
+      "id": "rights-and-scope",
+      "path": "references/INDEX.md",
       "lines": [
-        10,
-        16
+        5,
+        21
       ],
       "status": "documented"
     },
@@ -151,7 +151,8 @@
       "evidence": [
         "skill-read",
         "skill-select"
-      ]
+      ],
+      "detailStep": "read"
     },
     {
       "id": "implements",
@@ -169,24 +170,26 @@
       },
       "evidence": [
         "skill-decide"
-      ]
+      ],
+      "detailStep": "decide"
     },
     {
-      "id": "library",
+      "id": "records",
       "title": {
-        "en": "A library of 47 principles with a stated reading scope",
-        "ko": "읽은 범위를 밝힌 원칙 47개",
-        "ja": "読んだ範囲を明記した原則47件",
-        "zh": "注明阅读范围的47条原则"
+        "en": "Checks and records decisions",
+        "ko": "결정마다 확인하고 기록합니다",
+        "ja": "判断ごとに確認して記録する",
+        "zh": "逐项检查决定并记录"
       },
       "body": {
-        "en": "Each principle file has a definition, a source link, when to apply, when not to apply, an observable check and the scope that was actually read. Definitions are written in the author’s own words, not copied from the sources.",
-        "ko": "원칙 파일마다 정의, 출처 링크, 적용할 때, 적용하지 않을 때, 관찰 확인, 실제로 읽은 범위가 있습니다. 정의는 출처에서 옮기지 않고 직접 쓴 문장입니다.",
-        "ja": "各原則ファイルに、定義、出典リンク、適用する場面、適用しない場面、観察による確認、実際に読んだ範囲があります。定義は出典から写さず、自分の言葉で書いています。",
-        "zh": "每个原则文件都有定义、来源链接、适用时机、不适用时机、可观察的检查以及实际阅读范围。定义用自己的话写成,没有照搬来源。"
+        "en": "Each design decision carries one observable check. The skill runs it in a rendered page when a browser path exists, never guesses a pass, and writes the results and the unverified items to COGUX.md.",
+        "ko": "설계 결정마다 관찰 확인 한 가지가 붙습니다. 브라우저 경로가 있으면 렌더링한 화면에서 실행하고, 통과를 추측으로 적지 않으며, 결과와 미확인 항목을 COGUX.md에 남깁니다.",
+        "ja": "設計判断ごとに観察できる確認が一つ付きます。ブラウザ経路があれば描画した画面で実行し、合格を推測で書かず、結果と未確認項目をCOGUX.mdに残します。",
+        "zh": "每项设计决定都带有一个可观察的检查。有浏览器路径时在渲染后的页面上执行,不凭猜测记为通过,并把结果和未确认项写入COGUX.md。"
       },
+      "detailStep": "verify",
       "evidence": [
-        "library"
+        "skill-verify"
       ]
     }
   ],
@@ -297,6 +300,24 @@
         "fixture-a",
         "fixture-b"
       ]
+    },
+    {
+      "id": "library",
+      "title": {
+        "en": "A library of 47 principles with a stated reading scope",
+        "ko": "읽은 범위를 밝힌 원칙 47개",
+        "ja": "読んだ範囲を明記した原則47件",
+        "zh": "注明阅读范围的47条原则"
+      },
+      "body": {
+        "en": "Each principle file has a definition, a source link, when to apply, when not to apply, an observable check and the scope that was actually read. Definitions are written in the author’s own words, not copied from the sources.",
+        "ko": "원칙 파일마다 정의, 출처 링크, 적용할 때, 적용하지 않을 때, 관찰 확인, 실제로 읽은 범위가 있습니다. 정의는 출처에서 옮기지 않고 직접 쓴 문장입니다.",
+        "ja": "各原則ファイルに、定義、出典リンク、適用する場面、適用しない場面、観察による確認、実際に読んだ範囲があります。定義は出典から写さず、自分の言葉で書いています。",
+        "zh": "每个原则文件都有定义、来源链接、适用时机、不适用时机、可观察的检查以及实际阅读范围。定义用自己的话写成,没有照搬来源。"
+      },
+      "evidence": [
+        "library"
+      ]
     }
   ],
   "limitations": [
@@ -322,7 +343,7 @@
         "zh": "定义只与来源的开头部分做了对照。没有任何原则读过全文,也没有打开原始研究。"
       },
       "evidence": [
-        "readme-source",
+        "rights-and-scope",
         "library"
       ]
     },
@@ -335,7 +356,7 @@
         "zh": "第三方来源(Laws of UX、Nielsen Norman Group、jnd.org、arXiv)的权利归各自作者所有,MIT许可证不适用于它们。自己撰写的摘要是否构成CC BY-NC-ND材料的衍生作品,未做法律核实。"
       },
       "evidence": [
-        "readme-source",
+        "rights-and-scope",
         "license"
       ]
     }

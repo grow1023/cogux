@@ -6,7 +6,7 @@
 
 ![cogux: 说明示意图，并非实际应用截图](assets/zh/hero.png)
 
-not specified · MIT
+0.1.0 · MIT
 
 ## 为什么使用
 
@@ -14,7 +14,7 @@ not specified · MIT
 | --- | --- |
 | 只选适合的原则 | 先阅读用户、任务、界面和约束,再选择原则,并必须写出被排除的原则及理由。对所有项目套用同一组原则被定义为失败。 |
 | 修改真实的界面代码 | 每项设计决定都写明原则、界面、修改内容,以及数量、尺寸或是否存在这类可观察的检查。随后在项目代码中实现,并记录到COGUX.md。 |
-| 注明阅读范围的47条原则 | 每个原则文件都有定义、来源链接、适用时机、不适用时机、可观察的检查以及实际阅读范围。定义用自己的话写成,没有照搬来源。 |
+| 逐项检查决定并记录 | 每项设计决定都带有一个可观察的检查。有浏览器路径时在渲染后的页面上执行,不凭猜测记为通过,并把结果和未确认项写入COGUX.md。 |
 
 ## 快速开始
 
@@ -51,11 +51,15 @@ bash "$HOME/.claude/skills/cogux/gates/verify_cogux.sh" "$HOME/.claude/skills/co
 
 fixtures/中有首次使用的结账流程和专注学习应用。各自包含修改前页面、修改后页面和COGUX.md,两个项目选择的原则不同。
 
+### 注明阅读范围的47条原则
+
+每个原则文件都有定义、来源链接、适用时机、不适用时机、可观察的检查以及实际阅读范围。定义用自己的话写成,没有照搬来源。
+
 ![只选适合的原则: 说明示意图，并非实际应用截图](assets/zh/gallery-1.png)
 
 ![修改真实的界面代码: 说明示意图，并非实际应用截图](assets/zh/gallery-2.png)
 
-![注明阅读范围的47条原则: 说明示意图，并非实际应用截图](assets/zh/gallery-3.png)
+![逐项检查决定并记录: 说明示意图，并非实际应用截图](assets/zh/gallery-3.png)
 
 ## 限制与隐私
 
@@ -86,7 +90,7 @@ fixtures/中有首次使用的结账流程和专注学习应用。各自包含�
 - `skill-decide`: `SKILL.md`, L57–L69 (已检查代码)
 - `skill-verify`: `SKILL.md`, L71–L87 (已检查代码)
 - `library`: `references/INDEX.md`, L1–L22 (已检查代码)
-- `readme-source`: `README.md`, L10–L16 (文档说明)
+- `rights-and-scope`: `references/INDEX.md`, L5–L21 (文档说明)
 - `gate`: `gates/verify_cogux.sh`, L1–L34 (已验证运行)
 - `fixture-a`: `fixtures/checkout-first-time/COGUX.md`, L1–L77 (已检查代码)
 - `fixture-b`: `fixtures/study-adhd/COGUX.md`, L1–L77 (已检查代码)
@@ -94,14 +98,15 @@ fixtures/中有首次使用的结账流程和专注学习应用。各自包含�
 
 - `selects` → `skill-read`, `skill-select`
 - `implements` → `skill-decide`
-- `library` → `library`
+- `records` → `skill-verify`
 - `read` → `skill-read`, `skill-select`
 - `decide` → `skill-decide`
 - `verify` → `skill-verify`
 - `examples` → `fixture-a`, `fixture-b`
+- `library` → `library`
 - `local-rules` → `skill-boundary`, `skill-decide`
-- `reading-scope` → `readme-source`, `library`
-- `third-party` → `readme-source`, `license`
+- `reading-scope` → `rights-and-scope`, `library`
+- `third-party` → `rights-and-scope`, `license`
 - `gate-run` → `gate`
 - `clone` → `gate`
 - `quickstart` → `gate`, `skill-verify`

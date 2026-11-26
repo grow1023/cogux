@@ -6,7 +6,7 @@
 
 ![cogux: 설명용 도식이며 실제 앱 화면이 아닙니다](assets/ko/hero.png)
 
-not specified · MIT
+0.1.0 · MIT
 
 ## 왜 쓰나요
 
@@ -14,7 +14,7 @@ not specified · MIT
 | --- | --- |
 | 맞는 원칙만 고릅니다 | 사용자, 과업, 화면, 제약을 먼저 읽습니다. 그다음 원칙을 고르고, 제외한 원칙도 이유와 함께 반드시 적습니다. 모든 프로젝트에 같은 묶음을 쓰는 것은 실패로 규정합니다. |
 | 실제 화면 코드를 고칩니다 | 설계 결정마다 원칙, 화면, 바꾸는 내용, 개수나 크기나 존재 여부처럼 관찰할 수 있는 확인 한 가지를 씁니다. 그 결정을 프로젝트 코드에 구현하고 COGUX.md에 기록합니다. |
-| 읽은 범위를 밝힌 원칙 47개 | 원칙 파일마다 정의, 출처 링크, 적용할 때, 적용하지 않을 때, 관찰 확인, 실제로 읽은 범위가 있습니다. 정의는 출처에서 옮기지 않고 직접 쓴 문장입니다. |
+| 결정마다 확인하고 기록합니다 | 설계 결정마다 관찰 확인 한 가지가 붙습니다. 브라우저 경로가 있으면 렌더링한 화면에서 실행하고, 통과를 추측으로 적지 않으며, 결과와 미확인 항목을 COGUX.md에 남깁니다. |
 
 ## 빠른 시작
 
@@ -51,11 +51,15 @@ bash "$HOME/.claude/skills/cogux/gates/verify_cogux.sh" "$HOME/.claude/skills/co
 
 fixtures/에는 처음 쓰는 결제 흐름과 집중 공부 앱이 있습니다. 각각 수정 전 화면, 수정한 화면, COGUX.md가 있고, 두 프로젝트가 고른 원칙은 서로 다릅니다.
 
+### 읽은 범위를 밝힌 원칙 47개
+
+원칙 파일마다 정의, 출처 링크, 적용할 때, 적용하지 않을 때, 관찰 확인, 실제로 읽은 범위가 있습니다. 정의는 출처에서 옮기지 않고 직접 쓴 문장입니다.
+
 ![맞는 원칙만 고릅니다: 설명용 도식이며 실제 앱 화면이 아닙니다](assets/ko/gallery-1.png)
 
 ![실제 화면 코드를 고칩니다: 설명용 도식이며 실제 앱 화면이 아닙니다](assets/ko/gallery-2.png)
 
-![읽은 범위를 밝힌 원칙 47개: 설명용 도식이며 실제 앱 화면이 아닙니다](assets/ko/gallery-3.png)
+![결정마다 확인하고 기록합니다: 설명용 도식이며 실제 앱 화면이 아닙니다](assets/ko/gallery-3.png)
 
 ## 한계와 개인정보
 
@@ -86,7 +90,7 @@ fixtures/에는 처음 쓰는 결제 흐름과 집중 공부 앱이 있습니다
 - `skill-decide`: `SKILL.md`, L57–L69 (코드 확인)
 - `skill-verify`: `SKILL.md`, L71–L87 (코드 확인)
 - `library`: `references/INDEX.md`, L1–L22 (코드 확인)
-- `readme-source`: `README.md`, L10–L16 (문서 기준)
+- `rights-and-scope`: `references/INDEX.md`, L5–L21 (문서 기준)
 - `gate`: `gates/verify_cogux.sh`, L1–L34 (실행 확인)
 - `fixture-a`: `fixtures/checkout-first-time/COGUX.md`, L1–L77 (코드 확인)
 - `fixture-b`: `fixtures/study-adhd/COGUX.md`, L1–L77 (코드 확인)
@@ -94,14 +98,15 @@ fixtures/에는 처음 쓰는 결제 흐름과 집중 공부 앱이 있습니다
 
 - `selects` → `skill-read`, `skill-select`
 - `implements` → `skill-decide`
-- `library` → `library`
+- `records` → `skill-verify`
 - `read` → `skill-read`, `skill-select`
 - `decide` → `skill-decide`
 - `verify` → `skill-verify`
 - `examples` → `fixture-a`, `fixture-b`
+- `library` → `library`
 - `local-rules` → `skill-boundary`, `skill-decide`
-- `reading-scope` → `readme-source`, `library`
-- `third-party` → `readme-source`, `license`
+- `reading-scope` → `rights-and-scope`, `library`
+- `third-party` → `rights-and-scope`, `license`
 - `gate-run` → `gate`
 - `clone` → `gate`
 - `quickstart` → `gate`, `skill-verify`

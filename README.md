@@ -6,7 +6,7 @@ A Claude Code skill that reads a project first, picks only the cognitive-psychol
 
 ![cogux: Explanatory diagram, not an application screenshot](assets/hero.png)
 
-not specified · MIT
+0.1.0 · MIT
 
 ## Why use it
 
@@ -14,7 +14,7 @@ not specified · MIT
 | --- | --- |
 | Picks only the principles that fit | The skill reads the users, tasks, screens and constraints first. It then selects principles and must also list the principles it excluded, with reasons. Using one fixed bundle for every project counts as a failure. |
 | Edits real UI code | Every design decision names a principle, a screen, a change and one observable check such as a count, a size or the presence of an element. The change is then made in the project code and recorded in COGUX.md. |
-| A library of 47 principles with a stated reading scope | Each principle file has a definition, a source link, when to apply, when not to apply, an observable check and the scope that was actually read. Definitions are written in the author’s own words, not copied from the sources. |
+| Checks and records decisions | Each design decision carries one observable check. The skill runs it in a rendered page when a browser path exists, never guesses a pass, and writes the results and the unverified items to COGUX.md. |
 
 ## Quick start
 
@@ -51,11 +51,15 @@ Run each check in a rendered page when a browser path exists. Results are pass, 
 
 fixtures/ holds a first-time checkout flow and a focus-study app. Each has the before page, the changed page and a COGUX.md. The two projects select different principles.
 
+### A library of 47 principles with a stated reading scope
+
+Each principle file has a definition, a source link, when to apply, when not to apply, an observable check and the scope that was actually read. Definitions are written in the author’s own words, not copied from the sources.
+
 ![Picks only the principles that fit: Explanatory diagram, not an application screenshot](assets/gallery-1.png)
 
 ![Edits real UI code: Explanatory diagram, not an application screenshot](assets/gallery-2.png)
 
-![A library of 47 principles with a stated reading scope: Explanatory diagram, not an application screenshot](assets/gallery-3.png)
+![Checks and records decisions: Explanatory diagram, not an application screenshot](assets/gallery-3.png)
 
 ## Limits and privacy
 
@@ -86,7 +90,7 @@ Read SKILL.md for the workflow, references/INDEX.md for the principles, and fixt
 - `skill-decide`: `SKILL.md`, L57–L69 (Source inspected)
 - `skill-verify`: `SKILL.md`, L71–L87 (Source inspected)
 - `library`: `references/INDEX.md`, L1–L22 (Source inspected)
-- `readme-source`: `README.md`, L10–L16 (Documented)
+- `rights-and-scope`: `references/INDEX.md`, L5–L21 (Documented)
 - `gate`: `gates/verify_cogux.sh`, L1–L34 (Execution verified)
 - `fixture-a`: `fixtures/checkout-first-time/COGUX.md`, L1–L77 (Source inspected)
 - `fixture-b`: `fixtures/study-adhd/COGUX.md`, L1–L77 (Source inspected)
@@ -94,14 +98,15 @@ Read SKILL.md for the workflow, references/INDEX.md for the principles, and fixt
 
 - `selects` → `skill-read`, `skill-select`
 - `implements` → `skill-decide`
-- `library` → `library`
+- `records` → `skill-verify`
 - `read` → `skill-read`, `skill-select`
 - `decide` → `skill-decide`
 - `verify` → `skill-verify`
 - `examples` → `fixture-a`, `fixture-b`
+- `library` → `library`
 - `local-rules` → `skill-boundary`, `skill-decide`
-- `reading-scope` → `readme-source`, `library`
-- `third-party` → `readme-source`, `license`
+- `reading-scope` → `rights-and-scope`, `library`
+- `third-party` → `rights-and-scope`, `license`
 - `gate-run` → `gate`
 - `clone` → `gate`
 - `quickstart` → `gate`, `skill-verify`

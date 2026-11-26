@@ -65,11 +65,11 @@
       "status": "code-verified"
     },
     {
-      "id": "readme-source",
-      "path": "README.md",
+      "id": "rights-and-scope",
+      "path": "references/INDEX.md",
       "lines": [
-        10,
-        16
+        5,
+        21
       ],
       "status": "documented"
     },
@@ -118,8 +118,8 @@
     "implements": [
       "skill-decide"
     ],
-    "library": [
-      "library"
+    "records": [
+      "skill-verify"
     ],
     "read": [
       "skill-read",
@@ -135,16 +135,19 @@
       "fixture-a",
       "fixture-b"
     ],
+    "library": [
+      "library"
+    ],
     "local-rules": [
       "skill-boundary",
       "skill-decide"
     ],
     "reading-scope": [
-      "readme-source",
+      "rights-and-scope",
       "library"
     ],
     "third-party": [
-      "readme-source",
+      "rights-and-scope",
       "license"
     ],
     "gate-run": [

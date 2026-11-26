@@ -3,7 +3,7 @@
   "repoType": "prototype",
   "mode": "update",
   "baselineCommit": "e43ef8ef2d110c2ca64fbb105019d46728e39775",
-  "reviewedHead": "3a6c92b7a12b91c4b6a67b7e56fc49db3842a4ff",
+  "reviewedHead": "ea2f1ca2cab78663585dfe0f44890add820df9dc",
   "references": [
     {
       "repo": "heydamir/unslop",
@@ -109,7 +109,8 @@
       "assets/zh/og.png",
       "docs/showcase/content.json",
       "docs/showcase/sources.json",
-      "docs/showcase/visuals.json"
+      "docs/showcase/visuals.json",
+      "package.json"
     ],
     "summary": "Added four-language READMEs, 24 locally rendered explanatory diagrams, showcase manifests, harness community files, VERSION and a Makefile that calls only the repository gate. Source skill text and gate logic did not change."
   },

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "repoType": "prototype",
-  "mode": "baseline",
-  "baselineCommit": null,
-  "reviewedHead": "e43ef8ef2d110c2ca64fbb105019d46728e39775",
+  "mode": "update",
+  "baselineCommit": "e43ef8ef2d110c2ca64fbb105019d46728e39775",
+  "reviewedHead": "21161c3e7642d4f1f9b51e65f3e93992578d1e04",
   "references": [
     {
       "repo": "heydamir/unslop",
@@ -55,7 +55,44 @@
   "privacy": {
     "gaps": []
   },
-  "diffReview": null,
+  "diffReview": {
+    "since": "e43ef8ef2d110c2ca64fbb105019d46728e39775",
+    "files": [
+      "README.ja.md",
+      "README.ko.md",
+      "README.md",
+      "README.zh.md",
+      "assets/architecture.png",
+      "assets/gallery-1.png",
+      "assets/gallery-2.png",
+      "assets/gallery-3.png",
+      "assets/hero.png",
+      "assets/ja/architecture.png",
+      "assets/ja/gallery-1.png",
+      "assets/ja/gallery-2.png",
+      "assets/ja/gallery-3.png",
+      "assets/ja/hero.png",
+      "assets/ja/og.png",
+      "assets/ko/architecture.png",
+      "assets/ko/gallery-1.png",
+      "assets/ko/gallery-2.png",
+      "assets/ko/gallery-3.png",
+      "assets/ko/hero.png",
+      "assets/ko/og.png",
+      "assets/og.png",
+      "assets/showcase.html",
+      "assets/zh/architecture.png",
+      "assets/zh/gallery-1.png",
+      "assets/zh/gallery-2.png",
+      "assets/zh/gallery-3.png",
+      "assets/zh/hero.png",
+      "assets/zh/og.png",
+      "docs/showcase/content.json",
+      "docs/showcase/sources.json",
+      "docs/showcase/visuals.json"
+    ],
+    "summary": "Added four-language READMEs, 24 locally rendered explanatory diagrams and docs/showcase manifests. No source or gate files changed."
+  },
   "readiness": {
     "verified": [
       "verify_cogux.sh exit 0 on the installed copy"
@@ -63,7 +100,9 @@
     "unverified": [
       "Install by git clone from the remote",
       "Whether the own-words summaries count as derivative works of Laws of UX (CC BY-NC-ND 4.0)",
-      "No reference file was read in full"
+      "No reference file was read in full",
+      "git clone https://github.com/grow1023/cogux \"$HOME/.claude/skills/cogux\"",
+      "git clone install: git clone https://github.com/grow1023/cogux \"$HOME/.claude/skills/cogux\""
     ],
     "blocked": []
   }

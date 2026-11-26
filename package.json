@@ -1,0 +1,7 @@
+{
+  "name": "cogux",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Claude Code skill: reads a project, picks fitting cognitive-psychology principles, edits real UI code and records why in COGUX.md",
+  "license": "MIT"
+}

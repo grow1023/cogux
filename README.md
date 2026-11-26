@@ -1,20 +1,109 @@
 # cogux
 
-인지심리학 기반 UI/UX 설계·구현 스킬입니다. 프로젝트의 사용자와 과업을 먼저 읽고, 맞는 인지 원칙만 골라 설계 결정을 내린 뒤 실제 화면 코드를 고치고 `COGUX.md`에 근거를 남깁니다.
+A Claude Code skill that reads a project first, picks only the cognitive-psychology principles that fit it, records why, edits real UI code, and writes COGUX.md.
 
-- 사용법: `SKILL.md`
-- 원칙 라이브러리: `references/INDEX.md` (원칙 47개)
-- 예시 프로젝트 둘: `fixtures/`
-- 구조 검사: `bash gates/verify_cogux.sh <이 폴더>`
+**English** | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh.md)
 
-## 출처와 권리
+![cogux: Explanatory diagram, not an application screenshot](assets/hero.png)
 
-라이브러리의 정의는 출처를 읽고 제 말로 새로 쓴 요약입니다. 원문 문장과 이미지는 옮기지 않았고, 항목마다 원문 링크를 답니다. 제3자 출처(Laws of UX, Nielsen Norman Group, Don Norman의 jnd.org, arXiv 논문)의 권리는 각 저작자에게 있으며, 이 저장소의 MIT 라이선스는 그 출처에 적용되지 않습니다. 이 요약이 출처 라이선스상 변경물에 해당하는지는 확인하지 못했습니다.
+not specified · MIT
 
-## 한계
+## Why use it
 
-항목의 정의는 출처의 앞부분(요약, 정의, 요점, 유래)만 읽고 대조했습니다. 전문을 끝까지 읽은 항목은 없고, 원 연구는 열어 보지 않았습니다. 논란이 되는 판단에는 출처를 직접 열어 확인해 주십시오.
+| | |
+| --- | --- |
+| Picks only the principles that fit | The skill reads the users, tasks, screens and constraints first. It then selects principles and must also list the principles it excluded, with reasons. Using one fixed bundle for every project counts as a failure. |
+| Edits real UI code | Every design decision names a principle, a screen, a change and one observable check such as a count, a size or the presence of an element. The change is then made in the project code and recorded in COGUX.md. |
+| A library of 47 principles with a stated reading scope | Each principle file has a definition, a source link, when to apply, when not to apply, an observable check and the scope that was actually read. Definitions are written in the author’s own words, not copied from the sources. |
 
-## 라이선스
+## Quick start
 
-MIT. `LICENSE`를 보십시오.
+git and bash. The skill is meant to be used in Claude Code. Some steps refer to local rules and gates under ~/.claude that this repository does not contain.
+
+```text
+git clone https://github.com/grow1023/cogux "$HOME/.claude/skills/cogux"
+bash "$HOME/.claude/skills/cogux/gates/verify_cogux.sh" "$HOME/.claude/skills/cogux"
+```
+
+The second command checks the skill structure, the principle files, the two example projects and the secret scan. It ends with VERIFY PASS when every sub-gate passes, but the sub-gate that runs the theme gate needs the owner’s local file and can fail on another computer.
+
+## How it works
+
+The skill follows six steps in order. The three stages below group them.
+
+![How it works: Explanatory diagram, not an application screenshot](assets/architecture.png)
+
+### Read and select
+
+Record users, tasks, screens and constraints with evidence or an “(assumed)” mark. Then select principles and list the excluded ones.
+
+### Decide and implement
+
+Write each decision with one observable check, change the real UI code and run the existing stripe and theme gates on the changed files.
+
+### Verify and record
+
+Run each check in a rendered page when a browser path exists. Results are pass, fail, unverified or not-applicable with a reason. COGUX.md keeps the record.
+
+## Use cases
+
+### Two contrasting example projects
+
+fixtures/ holds a first-time checkout flow and a focus-study app. Each has the before page, the changed page and a COGUX.md. The two projects select different principles.
+
+![Picks only the principles that fit: Explanatory diagram, not an application screenshot](assets/gallery-1.png)
+
+![Edits real UI code: Explanatory diagram, not an application screenshot](assets/gallery-2.png)
+
+![A library of 47 principles with a stated reading scope: Explanatory diagram, not an application screenshot](assets/gallery-3.png)
+
+## Limits and privacy
+
+- The skill text and the gates refer to the owner’s local rules in ~/.claude/rules/ and gates in ~/.claude/qa-canon/. Those files are not in this repository, so a clone on another computer can fail some gate steps.
+
+- Definitions were compared with the opening sections of the sources only. No principle was read in full, and the original studies were not opened.
+
+- Third-party sources (Laws of UX, Nielsen Norman Group, jnd.org, arXiv) keep their own rights. The MIT license does not cover them. Whether the own-words summaries count as derivative works of CC BY-NC-ND material was not legally checked.
+
+## Verification
+
+- **Execution verified**: verify_cogux.sh was run on the installed copy and ended with VERIFY PASS. This checks structure, not whether the principle selection is right for a new project.
+- **Documented**: The git clone command was not run because the remote repository did not exist when this README was written.
+
+## Next steps
+
+Read SKILL.md for the workflow, references/INDEX.md for the principles, and fixtures/ for finished examples.
+
+<details>
+<summary>Source map</summary>
+
+[JSON](docs/showcase/sources.json)
+
+- `skill-intro`: `SKILL.md`, L6–L8 (Source inspected)
+- `skill-boundary`: `SKILL.md`, L10–L16 (Source inspected)
+- `skill-read`: `SKILL.md`, L22–L33 (Source inspected)
+- `skill-select`: `SKILL.md`, L35–L55 (Source inspected)
+- `skill-decide`: `SKILL.md`, L57–L69 (Source inspected)
+- `skill-verify`: `SKILL.md`, L71–L87 (Source inspected)
+- `library`: `references/INDEX.md`, L1–L22 (Source inspected)
+- `readme-source`: `README.md`, L10–L16 (Documented)
+- `gate`: `gates/verify_cogux.sh`, L1–L34 (Execution verified)
+- `fixture-a`: `fixtures/checkout-first-time/COGUX.md`, L1–L77 (Source inspected)
+- `fixture-b`: `fixtures/study-adhd/COGUX.md`, L1–L77 (Source inspected)
+- `license`: `LICENSE`, L1–L3 (Source inspected)
+
+- `selects` → `skill-read`, `skill-select`
+- `implements` → `skill-decide`
+- `library` → `library`
+- `read` → `skill-read`, `skill-select`
+- `decide` → `skill-decide`
+- `verify` → `skill-verify`
+- `examples` → `fixture-a`, `fixture-b`
+- `local-rules` → `skill-boundary`, `skill-decide`
+- `reading-scope` → `readme-source`, `library`
+- `third-party` → `readme-source`, `license`
+- `gate-run` → `gate`
+- `clone` → `gate`
+- `quickstart` → `gate`, `skill-verify`
+
+</details>

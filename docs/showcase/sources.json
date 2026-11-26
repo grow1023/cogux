@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "evidence": [
+    {
+      "id": "skill-intro",
+      "path": "SKILL.md",
+      "lines": [
+        6,
+        8
+      ],
+      "status": "code-verified"
+    },
+    {
+      "id": "skill-boundary",
+      "path": "SKILL.md",
+      "lines": [
+        10,
+        16
+      ],
+      "status": "code-verified"
+    },
+    {
+      "id": "skill-read",
+      "path": "SKILL.md",
+      "lines": [
+        22,
+        33
+      ],
+      "status": "code-verified"
+    },
+    {
+      "id": "skill-select",
+      "path": "SKILL.md",
+      "lines": [
+        35,
+        55
+      ],
+      "status": "code-verified"
+    },
+    {
+      "id": "skill-decide",
+      "path": "SKILL.md",
+      "lines": [
+        57,
+        69
+      ],
+      "status": "code-verified"
+    },
+    {
+      "id": "skill-verify",
+      "path": "SKILL.md",
+      "lines": [
+        71,
+        87
+      ],
+      "status": "code-verified"
+    },
+    {
+      "id": "library",
+      "path": "references/INDEX.md",
+      "lines": [
+        1,
+        22
+      ],
+      "status": "code-verified"
+    },
+    {
+      "id": "readme-source",
+      "path": "README.md",
+      "lines": [
+        10,
+        16
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "gate",
+      "path": "gates/verify_cogux.sh",
+      "lines": [
+        1,
+        34
+      ],
+      "status": "execution-verified"
+    },
+    {
+      "id": "fixture-a",
+      "path": "fixtures/checkout-first-time/COGUX.md",
+      "lines": [
+        1,
+        77
+      ],
+      "status": "code-verified"
+    },
+    {
+      "id": "fixture-b",
+      "path": "fixtures/study-adhd/COGUX.md",
+      "lines": [
+        1,
+        77
+      ],
+      "status": "code-verified"
+    },
+    {
+      "id": "license",
+      "path": "LICENSE",
+      "lines": [
+        1,
+        3
+      ],
+      "status": "code-verified"
+    }
+  ],
+  "claims": {
+    "selects": [
+      "skill-read",
+      "skill-select"
+    ],
+    "implements": [
+      "skill-decide"
+    ],
+    "library": [
+      "library"
+    ],
+    "read": [
+      "skill-read",
+      "skill-select"
+    ],
+    "decide": [
+      "skill-decide"
+    ],
+    "verify": [
+      "skill-verify"
+    ],
+    "examples": [
+      "fixture-a",
+      "fixture-b"
+    ],
+    "local-rules": [
+      "skill-boundary",
+      "skill-decide"
+    ],
+    "reading-scope": [
+      "readme-source",
+      "library"
+    ],
+    "third-party": [
+      "readme-source",
+      "license"
+    ],
+    "gate-run": [
+      "gate"
+    ],
+    "clone": [
+      "gate"
+    ],
+    "quickstart": [
+      "gate",
+      "skill-verify"
+    ]
+  }
+}

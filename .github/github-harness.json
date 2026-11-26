@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "profile": "public-full",
+  "intent": {
+    "visibility": "private",
+    "images": "required",
+    "languages": [
+      "en",
+      "ko",
+      "ja",
+      "zh"
+    ],
+    "release": "not_requested",
+    "description": "Claude Code skill: reads a project, picks fitting cognitive-psychology principles, edits real UI code and records why in COGUX.md",
+    "homepage": "",
+    "topics": [
+      "claude-code",
+      "claude-skill",
+      "ux",
+      "cognitive-psychology",
+      "ui-design"
+    ]
+  },
+  "approvals": {
+    "images": true,
+    "publish": false,
+    "release": false
+  },
+  "local": {
+    "artifacts": "pending",
+    "version": "pending"
+  },
+  "remote": {
+    "push": "pending",
+    "metadata": "pending",
+    "tag": "not_requested",
+    "release": "not_requested",
+    "verification": "pending"
+  },
+  "result": "incomplete"
+}

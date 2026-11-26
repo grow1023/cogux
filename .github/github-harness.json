@@ -16,9 +16,9 @@
     "topics": [
       "claude-code",
       "claude-skill",
-      "ux",
       "cognitive-psychology",
-      "ui-design"
+      "ui-design",
+      "ux"
     ]
   },
   "approvals": {

@@ -1,0 +1,5 @@
+# <min>	<glob>
+1	SKILL.md
+10	references/*.md
+2	fixtures/*/COGUX.md
+2	fixtures/*/index.html

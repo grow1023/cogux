@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "repoType": "prototype",
+  "mode": "baseline",
+  "baselineCommit": null,
+  "reviewedHead": null,
+  "references": [
+    {
+      "repo": "heydamir/unslop",
+      "commit": "620163eedb3529d9cd23a3994ed8d287d06f760d",
+      "inspected": [
+        "README.md"
+      ],
+      "adopted": [
+        "An install section that names the copy target and the update path.",
+        "A one-paragraph statement of what the skill does and which situations it covers."
+      ],
+      "rejected": [
+        "Plugin marketplace install: this repository has not tested a marketplace entry, so install is a plain copy into the skills folder.",
+        "Animated demo image in the README: this repository has no recorded demo."
+      ]
+    }
+  ],
+  "reproducibility": {
+    "prerequisites": [
+      "git",
+      "bash",
+      "shasum",
+      "agent-browser (only to rerun the fixture checks in a browser)"
+    ],
+    "install": {
+      "command": "git clone https://github.com/grow1023/cogux \"$HOME/.claude/skills/cogux\"",
+      "status": "unverified",
+      "evidence": "",
+      "reason": "The remote repository did not exist when this record was written."
+    },
+    "test": {
+      "command": "bash gates/verify_cogux.sh .",
+      "status": "verified",
+      "evidence": "exit 0; last line: VERIFY PASS (root=.), run on the installed copy",
+      "reason": ""
+    }
+  },
+  "ci": {
+    "workflows": [],
+    "remote": "not-configured",
+    "runUrl": "",
+    "runSha": ""
+  },
+  "license": {
+    "status": "present",
+    "file": "LICENSE",
+    "attribution": []
+  },
+  "privacy": {
+    "gaps": []
+  },
+  "diffReview": null,
+  "readiness": {
+    "verified": [
+      "verify_cogux.sh exit 0 on the installed copy"
+    ],
+    "unverified": [
+      "Install by git clone from the remote",
+      "Whether the own-words summaries count as derivative works of Laws of UX (CC BY-NC-ND 4.0)",
+      "No reference file was read in full"
+    ],
+    "blocked": []
+  }
+}
